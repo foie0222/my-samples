@@ -6,6 +6,26 @@ const fs = require('fs');
 const SLIDES_DIR = path.join(__dirname, 'slides');
 const OUTPUT_DIR = path.join(__dirname, 'output');
 const SCREENSHOTS_DIR = path.join(OUTPUT_DIR, 'screenshots');
+const SPEAKER_NOTES_PATH = path.join(__dirname, 'docs', '03_speaker_notes.md');
+
+// スピーカーノートをMarkdownから読み込む
+function parseSpeakerNotes() {
+  const content = fs.readFileSync(SPEAKER_NOTES_PATH, 'utf-8');
+  const notes = {};
+
+  // ## Slide XX: で分割
+  const slideRegex = /## Slide (\d+):[^\n]*\n([\s\S]*?)(?=## Slide \d+:|$)/g;
+  let match;
+
+  while ((match = slideRegex.exec(content)) !== null) {
+    const slideNum = parseInt(match[1], 10);
+    // 前後の空白と区切り線を削除
+    const noteText = match[2].trim().replace(/---\s*$/, '').trim();
+    notes[slideNum] = noteText;
+  }
+
+  return notes;
+}
 
 // スライドファイル一覧
 const SLIDE_FILES = [
@@ -77,7 +97,14 @@ async function main() {
   pptx.author = '井上 大貴';
   pptx.title = '競馬AIの歴史';
 
-  for (const screenshotPath of screenshotPaths) {
+  // スピーカーノートを読み込む
+  console.log('Loading speaker notes...');
+  const speakerNotes = parseSpeakerNotes();
+
+  for (let i = 0; i < screenshotPaths.length; i++) {
+    const screenshotPath = screenshotPaths[i];
+    const slideNum = i + 1;
+
     const slide = pptx.addSlide();
     slide.addImage({
       path: screenshotPath,
@@ -86,6 +113,12 @@ async function main() {
       w: 10,      // スライド幅 (16:9 = 10" × 5.625")
       h: 5.625,   // スライド高さ
     });
+
+    // スピーカーノートを追加
+    if (speakerNotes[slideNum]) {
+      slide.addNotes(speakerNotes[slideNum]);
+      console.log(`  Slide ${slideNum}: Added speaker notes`);
+    }
   }
 
   const outputPath = path.join(OUTPUT_DIR, '04_presentation_screenshot.pptx');
