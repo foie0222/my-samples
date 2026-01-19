@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "html2pptx": "^0.0.5",
     "playwright": "^1.57.0",
     "pptxgenjs": "^4.0.1",
     "sharp": "^0.34.5"

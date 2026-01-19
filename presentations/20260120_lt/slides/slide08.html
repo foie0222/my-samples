@@ -10,72 +10,146 @@
       display: flex;
       flex-direction: column;
       font-family: Arial, sans-serif;
-      background: #0d1117 url('bg-dark.png') center center no-repeat;
+      background: #0d1117 url('images/bg-dark.png') center center no-repeat;
       background-size: cover;
       color: #ffffff;
-      padding: 40pt 40pt 44pt 40pt;
+      padding: 36pt 40pt;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16pt;
+    }
+    .header-left {
+      flex: 1;
     }
     .label {
       font-size: 10pt;
-      color: #DC143C;
+      color: #4ECDC4;
       text-transform: uppercase;
       letter-spacing: 0.2em;
-      margin-bottom: 12pt;
+      margin-bottom: 8pt;
     }
     h1 {
-      font-size: 26pt;
+      font-size: 28pt;
       font-weight: bold;
       color: #ffffff;
-      margin-bottom: 24pt;
+      margin-bottom: 4pt;
+    }
+    .subtitle {
+      font-size: 11pt;
+      color: #8b949e;
+    }
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .profile img {
+      width: 80pt;
+      height: 80pt;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #4ECDC4;
+    }
+    .profile .source {
+      font-size: 7pt;
+      color: #6b7280;
+      margin-top: 4pt;
+    }
+    .stats-row {
+      display: flex;
+      gap: 16pt;
+      margin-bottom: 12pt;
+    }
+    .stat-card {
+      flex: 1;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8pt;
+      padding: 12pt 16pt;
+      text-align: center;
+      background: rgba(255,255,255,0.03);
+    }
+    .stat-card p {
+      font-size: 10pt;
+      color: #8b949e;
+      margin-bottom: 4pt;
+    }
+    .stat-card h2 {
+      font-size: 18pt;
+      font-weight: bold;
+      color: #4ECDC4;
+    }
+    .end-box {
+      border: 1px solid #DC143C;
+      border-radius: 8pt;
+      padding: 12pt 20pt;
+      text-align: center;
+      margin-bottom: 12pt;
+      background: rgba(220,20,60,0.1);
+    }
+    .end-box h2 {
+      font-size: 16pt;
+      font-weight: bold;
+      color: #DC143C;
+      margin-bottom: 4pt;
+    }
+    .end-box p {
+      font-size: 11pt;
+      color: #8b949e;
     }
     ul {
       list-style: none;
-      margin-bottom: 24pt;
+      margin-top: auto;
     }
     li {
-      font-size: 14pt;
+      font-size: 11pt;
       line-height: 1.8;
       color: #8b949e;
-      padding-left: 20pt;
+      padding-left: 16pt;
       position: relative;
     }
     li::before {
       content: "•";
       position: absolute;
       left: 0;
-      color: #DC143C;
-    }
-    .result-box {
-      border: 1px solid #DC143C;
-      border-radius: 8pt;
-      padding: 14pt 24pt;
-      text-align: center;
-      margin-bottom: 16pt;
-      background: rgba(220,20,60,0.1);
-    }
-    .result-box h2 {
-      font-size: 15pt;
-      font-weight: bold;
-      color: #DC143C;
-    }
-    .note {
-      font-size: 12pt;
-      text-align: center;
-      color: #8b949e;
+      color: #4ECDC4;
     }
   </style>
 </head>
 <body>
-  <p class="label">Conclusion</p>
-  <h1>なぜ今から参入しても勝てないのか</h1>
-  <ul>
-    <li>参入者増加 → 同じ買い目に殺到 → オッズ急落</li>
-    <li>先行者（松風など）→ 資金力でオッズを動かせる側に</li>
-    <li>計算時点と購入時点でオッズがズレる</li>
-  </ul>
-  <div class="result-box">
-    <h2>今から普通に参入しても、オッズ変動を予測できず期待値が取れない</h2>
+  <div class="header">
+    <div class="header-left">
+      <p class="label">Case Study</p>
+      <h1>競馬AIゆまの終焉（2022年）</h1>
+      <p class="subtitle">AIが算出した勝率を無料公開するサービス（2018年〜2022年）</p>
+    </div>
+    <div class="profile">
+      <img src="images/yuma-icon.png" alt="競馬AIゆま">
+      <p class="source">出典: はてなブログ</p>
+    </div>
   </div>
-  <p class="note">競馬AIゆまも「公開したら勝てなくなる」と判断した世界</p>
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <p>通算57,000レース</p>
+      <h2>回収率 約111%</h2>
+    </div>
+    <div class="stat-card">
+      <p>4年間の運営実績</p>
+      <h2>5000万PV / 5万フォロワー</h2>
+    </div>
+  </div>
+
+  <div class="end-box">
+    <h2>2022年8月にサービス終了</h2>
+    <p>終了理由:「利用者増加によるオッズ低下」</p>
+  </div>
+
+  <ul>
+    <li>「勝てない予想を提供したくない」</li>
+    <li>確率を公開すること自体が自滅につながる</li>
+  </ul>
 </body>
 </html>

@@ -10,29 +10,29 @@
       display: flex;
       flex-direction: column;
       font-family: Arial, sans-serif;
-      background: #0d1117 url('bg-dark.png') center center no-repeat;
+      background: #0d1117 url('images/bg-dark.png') center center no-repeat;
       background-size: cover;
       color: #ffffff;
-      padding: 40pt;
+      padding: 36pt 40pt;
     }
     .label {
       font-size: 10pt;
       color: #4ECDC4;
       text-transform: uppercase;
       letter-spacing: 0.2em;
-      margin-bottom: 24pt;
+      margin-bottom: 12pt;
     }
     h1 {
-      font-size: 32pt;
+      font-size: 28pt;
       font-weight: bold;
       color: #ffffff;
-      margin-bottom: 30pt;
+      margin-bottom: 16pt;
     }
     .timeline {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 30pt;
+      margin-bottom: 16pt;
     }
     .timeline-item {
       text-align: center;
@@ -69,21 +69,54 @@
       color: #8b949e;
       padding: 0 16pt;
     }
-    .cause {
-      font-size: 14pt;
+    .cause-label {
+      font-size: 12pt;
       color: #8b949e;
       text-align: center;
-      margin-bottom: 24pt;
+      margin-bottom: 10pt;
+    }
+    .cause-row {
+      display: flex;
+      gap: 16pt;
+      margin-bottom: 16pt;
+    }
+    .cause-box {
+      flex: 1;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8pt;
+      padding: 12pt 16pt;
+      background: rgba(255,255,255,0.03);
+    }
+    .cause-box.active {
+      border-color: #4ECDC4;
+      background: rgba(78,205,196,0.1);
+    }
+    .cause-box h3 {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #8b949e;
+      margin-bottom: 6pt;
+    }
+    .cause-box.active h3 {
+      color: #4ECDC4;
+    }
+    .cause-box p {
+      font-size: 10pt;
+      color: #6b7280;
+      line-height: 1.4;
+    }
+    .cause-box.active p {
+      color: #8b949e;
     }
     .message-box {
       border: 1px solid rgba(78,205,196,0.3);
       border-radius: 8pt;
-      padding: 16pt 24pt;
+      padding: 12pt 20pt;
       text-align: center;
       background: rgba(78,205,196,0.05);
     }
     .message-box p {
-      font-size: 16pt;
+      font-size: 14pt;
       color: #ffffff;
     }
   </style>
@@ -107,9 +140,19 @@
       <p>結末</p>
     </div>
   </div>
-  <p class="cause">敗因: オッズが下がって期待値が取れなくなった</p>
+  <p class="cause-label">敗因は2つあった</p>
+  <div class="cause-row">
+    <div class="cause-box active">
+      <h3>① 期待値が取れなくなった（技術的要因）</h3>
+      <p>オッズの変動、競合の増加、資金力の壁</p>
+    </div>
+    <div class="cause-box">
+      <h3>② 人間の愚かさ（人的要因）</h3>
+      <p>裁量介入の失敗、感情によるブレ</p>
+    </div>
+  </div>
   <div class="message-box">
-    <p>「なぜそうなったのか？」今日はその構造を話します</p>
+    <p>今日は①の構造を深掘りします</p>
   </div>
 </body>
 </html>

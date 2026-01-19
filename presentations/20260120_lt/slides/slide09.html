@@ -9,115 +9,78 @@
       height: 405pt;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
       font-family: Arial, sans-serif;
-      background: #0d1117 url('bg-dark.png') center center no-repeat;
+      background: #0d1117 url('images/bg-dark.png') center center no-repeat;
       background-size: cover;
       color: #ffffff;
-      padding: 40pt;
+      padding: 36pt 40pt;
     }
     .label {
       font-size: 10pt;
-      color: #4ECDC4;
+      color: #DC143C;
       text-transform: uppercase;
       letter-spacing: 0.2em;
       margin-bottom: 12pt;
     }
     h1 {
-      font-size: 36pt;
+      font-size: 28pt;
       font-weight: bold;
       color: #ffffff;
       margin-bottom: 24pt;
     }
-    .key-message {
-      border: 1px solid rgba(78,205,196,0.3);
-      border-radius: 8pt;
-      padding: 16pt 32pt;
-      margin-bottom: 24pt;
-      background: rgba(78,205,196,0.05);
-      text-align: center;
+    ul {
+      list-style: none;
+      margin-bottom: 20pt;
     }
-    .key-message .formula {
-      font-size: 18pt;
+    li {
+      font-size: 12pt;
+      line-height: 1.9;
+      color: #8b949e;
+      padding-left: 18pt;
+      position: relative;
+    }
+    li.highlight {
       color: #4ECDC4;
       font-weight: bold;
-      margin-bottom: 8pt;
     }
-    .key-message p {
-      font-size: 14pt;
-      color: #8b949e;
-      line-height: 1.6;
+    li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #DC143C;
     }
-    .timeline {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 24pt;
-    }
-    .timeline-item {
+    .result-box {
+      border: 1px solid #DC143C;
+      border-radius: 8pt;
+      padding: 14pt 24pt;
       text-align: center;
-      padding: 10pt 16pt;
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 6pt;
-      background: rgba(255,255,255,0.03);
-    }
-    .timeline-item.current {
-      border-color: #DC143C;
+      margin-bottom: 16pt;
       background: rgba(220,20,60,0.1);
     }
-    .timeline-item p {
-      font-size: 12pt;
-      color: #8b949e;
-    }
-    .timeline-item.current p {
-      color: #DC143C;
+    .result-box h2 {
+      font-size: 15pt;
       font-weight: bold;
+      color: #DC143C;
     }
-    .arrow {
-      font-size: 16pt;
-      color: #4ECDC4;
-      padding: 0 12pt;
-    }
-    .warning-box {
-      border: 1px solid #FFD700;
-      border-radius: 8pt;
-      padding: 12pt 24pt;
+    .note {
+      font-size: 12pt;
       text-align: center;
-      background: rgba(255,215,0,0.05);
-    }
-    .warning-box p {
-      font-size: 14pt;
-      color: #FFD700;
+      color: #8b949e;
     }
   </style>
 </head>
 <body>
-  <p class="label">Summary</p>
-  <h1>まとめ</h1>
-
-  <div class="key-message">
-    <p class="formula">期待値 = 確率 × オッズ</p>
-    <p>確率は計算できるが、オッズは先行者の資金力で動かされる</p>
-    <p>今から普通に参入しても勝てない</p>
+  <p class="label">Conclusion</p>
+  <h1>なぜ今から参入しても勝てないのか</h1>
+  <ul>
+    <li>参入者増加 → 同じ買い目に殺到 → オッズ急落</li>
+    <li>計算時点と締切時点でオッズがズレる → 期待値が取れない</li>
+    <li class="highlight">資金力があれば高精度なモデル開発 & 投票後のオッズ変動も予測可能</li>
+    <li>札束勢は有利、後発組は不利という構造</li>
+  </ul>
+  <div class="result-box">
+    <h2>今から普通に参入しても、オッズ変動を予測できず期待値が取れない</h2>
   </div>
-
-  <div class="timeline">
-    <div class="timeline-item">
-      <p>データ格差</p>
-    </div>
-    <p class="arrow">→</p>
-    <div class="timeline-item">
-      <p>技術格差</p>
-    </div>
-    <p class="arrow">→</p>
-    <div class="timeline-item current">
-      <p>資金力格差</p>
-    </div>
-  </div>
-
-  <div class="warning-box">
-    <p>ギャンブルは無理のない範囲で楽しみましょう</p>
-  </div>
+  <p class="note">競馬AIゆまも「公開したら勝てなくなる」と判断した世界</p>
 </body>
 </html>

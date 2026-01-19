@@ -10,10 +10,11 @@
       display: flex;
       flex-direction: column;
       font-family: Arial, sans-serif;
-      background: #0d1117 url('bg-dark.png') center center no-repeat;
+      background: #0d1117 url('images/bg-dark.png') center center no-repeat;
       background-size: cover;
       color: #ffffff;
-      padding: 36pt 40pt 40pt 40pt;
+      padding: 36pt 40pt;
+      overflow: hidden;
     }
     .label {
       font-size: 10pt;
@@ -23,90 +24,65 @@
       margin-bottom: 8pt;
     }
     h1 {
-      font-size: 26pt;
+      font-size: 28pt;
       font-weight: bold;
       color: #ffffff;
       margin-bottom: 14pt;
     }
-    .section-title {
-      font-size: 11pt;
+    .formula-hero {
+      text-align: center;
+      margin-bottom: 14pt;
+    }
+    .formula-hero p {
+      font-size: 36pt;
+      font-weight: bold;
+      color: #4ECDC4;
+    }
+    .components {
+      display: flex;
+      justify-content: center;
+      gap: 24pt;
+      margin-bottom: 14pt;
+    }
+    .component-box {
+      flex: 1;
+      max-width: 280pt;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8pt;
+      padding: 12pt 20pt;
+      background: rgba(255,255,255,0.03);
+    }
+    .component-box h2 {
+      font-size: 18pt;
+      font-weight: bold;
       color: #4ECDC4;
       margin-bottom: 4pt;
     }
-    .section-text {
-      font-size: 11pt;
+    .component-box p {
+      font-size: 12pt;
       color: #8b949e;
-      line-height: 1.4;
-      margin-bottom: 12pt;
+      line-height: 1.5;
     }
-    .formula-box {
-      border: 1px solid #4ECDC4;
+    .distortion-box {
+      border: 1px solid rgba(78,205,196,0.4);
       border-radius: 8pt;
-      padding: 10pt 20pt;
-      text-align: center;
-      margin-bottom: 12pt;
-      background: rgba(78,205,196,0.05);
+      padding: 12pt 24pt;
+      background: rgba(78,205,196,0.08);
     }
-    .formula {
-      font-size: 22pt;
-      font-weight: bold;
-      color: #4ECDC4;
-    }
-    .two-col {
-      display: flex;
-      gap: 14pt;
-      margin-bottom: 12pt;
-    }
-    .col {
-      flex: 1;
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 8pt;
-      padding: 10pt 14pt;
-      background: rgba(255,255,255,0.03);
-    }
-    .col.danger {
-      border-color: #DC143C;
-      background: rgba(220,20,60,0.1);
-    }
-    .col h2 {
-      font-size: 13pt;
+    .distortion-box h3 {
+      font-size: 14pt;
       font-weight: bold;
       color: #ffffff;
-      margin-bottom: 3pt;
+      margin-bottom: 6pt;
     }
-    .col.danger h2 {
-      color: #DC143C;
-    }
-    .col p {
-      font-size: 10pt;
-      color: #8b949e;
-    }
-    .example {
-      font-size: 10pt;
-      color: #8b949e;
-      margin-bottom: 10pt;
-    }
-    .warning-box {
-      border: 1px solid #DC143C;
-      border-radius: 8pt;
-      padding: 8pt 16pt;
-      text-align: center;
-      background: rgba(220,20,60,0.1);
-    }
-    .warning-box p {
+    .distortion-box p {
       font-size: 12pt;
-      color: #DC143C;
-      font-weight: bold;
+      color: #8b949e;
     }
-    .source {
-      font-size: 9pt;
-      color: #6b7280;
-      margin-top: 8pt;
-      text-align: right;
-    }
-    .source a {
-      color: #6b7280;
-      text-decoration: none;
+    .distortion-box .example {
+      font-size: 13pt;
+      color: #4ECDC4;
+      margin-top: 6pt;
     }
   </style>
 </head>
@@ -114,29 +90,25 @@
   <p class="label">Key Concept</p>
   <h1>期待値の構造</h1>
 
-  <p class="section-title">オッズの決まり方（パリミュチュエル方式）</p>
-  <p class="section-text">JRA: 「馬券の売上総額から控除率（約25%）を引いた額を的中者で分配」</p>
-
-  <div class="formula-box">
-    <p class="formula">期待値 = 確率 × オッズ</p>
+  <div class="formula-hero">
+    <p>期待値 = 確率 × オッズ</p>
   </div>
 
-  <div class="two-col">
-    <div class="col">
+  <div class="components">
+    <div class="component-box">
       <h2>確率</h2>
-      <p>機械学習で計算できる（技術で解決可能）</p>
+      <p>機械学習等で算出<br>（強力なモデルを作れる人が有利）</p>
     </div>
-    <div class="col danger">
+    <div class="component-box">
       <h2>オッズ</h2>
-      <p>全員の投票で決まる → 変動する</p>
+      <p>全員の投票で決まる<br>（変動する）</p>
     </div>
   </div>
 
-  <p class="example">例: AIが勝率15%と計算、オッズ10倍 → 期待値 150%（これが「歪み」）</p>
-
-  <div class="warning-box">
-    <p>問題: 歪みは消える（オッズが変動するから）</p>
+  <div class="distortion-box">
+    <h3>「歪み」を取る = 期待値 > 1 を狙う</h3>
+    <p>AIが「勝率15%」と計算、オッズ10倍（市場は10%と見てる）</p>
+    <p class="example">→ 15% × 10倍 = 150%（期待値 > 1）→ 理論上勝てる</p>
   </div>
-  <p class="source">出典: JRA公式サイト jra.go.jp/kouza/</p>
 </body>
 </html>

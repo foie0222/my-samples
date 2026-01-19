@@ -10,105 +10,45 @@
       display: flex;
       flex-direction: column;
       font-family: Arial, sans-serif;
-      background: #0d1117 url('bg-dark.png') center center no-repeat;
+      background: #0d1117 url('images/bg-dark.png') center center no-repeat;
       background-size: cover;
       color: #ffffff;
-      padding: 40pt 40pt 44pt 40pt;
+      padding: 36pt 40pt;
+      overflow: hidden;
     }
     .label {
       font-size: 10pt;
       color: #4ECDC4;
       text-transform: uppercase;
       letter-spacing: 0.2em;
-      margin-bottom: 12pt;
-    }
-    h1 {
-      font-size: 26pt;
-      font-weight: bold;
-      color: #ffffff;
-      margin-bottom: 24pt;
-    }
-    .timeline {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 24pt;
-    }
-    .timeline-item {
-      text-align: center;
-      padding: 14pt 20pt;
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: 8pt;
-      background: rgba(255,255,255,0.03);
-    }
-    .timeline-item h2 {
-      font-size: 15pt;
-      font-weight: bold;
-      color: #ffffff;
       margin-bottom: 4pt;
     }
-    .timeline-item p {
-      font-size: 10pt;
-      color: #8b949e;
-    }
-    .arrow {
-      font-size: 18pt;
-      color: #4ECDC4;
-      padding: 0 16pt;
-    }
-    ul {
-      list-style: none;
-      margin-bottom: 20pt;
-    }
-    li {
-      font-size: 13pt;
-      line-height: 1.7;
-      color: #8b949e;
-      padding-left: 18pt;
-      position: relative;
-    }
-    li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: #4ECDC4;
-    }
-    .highlight-box {
-      border: 1px solid #4ECDC4;
-      border-radius: 8pt;
-      padding: 12pt 20pt;
-      text-align: center;
-      background: rgba(78,205,196,0.05);
-    }
-    .highlight-box p {
-      font-size: 14pt;
+    h1 {
+      font-size: 28pt;
+      font-weight: bold;
       color: #ffffff;
+      margin-bottom: 10pt;
     }
-    .source {
-      font-size: 9pt;
-      color: #6b7280;
-      margin-top: auto;
-      text-align: right;
+    .diagram-container {
+      display: flex;
+      justify-content: center;
+      flex: 1;
+      align-items: center;
+    }
+    .diagram-container img {
+      width: 100%;
+      max-width: 600pt;
+      max-height: 280pt;
+      object-fit: contain;
     }
   </style>
 </head>
 <body>
-  <p class="label">History</p>
-  <h1>競馬AI黎明期（〜2016年頃）</h1>
-  <div class="timeline">
-    <div class="timeline-item">
-      <h2>データ格差</h2>
-      <p>情報を持つ者が勝つ</p>
-    </div>
+  <p class="label">Key Concept</p>
+  <h1>オッズの構造 — パリミュチュエル方式</h1>
+
+  <div class="diagram-container">
+    <img src="images/pari-mutuel-diagram.svg" alt="パリミュチュエル方式の図解">
   </div>
-  <ul>
-    <li>1995年「馬王」登場（荒井俊也氏）— 統計的競馬予測の先駆け</li>
-    <li>データ入手が困難 → 情報格差で勝てた</li>
-    <li>参入者が少ない → オッズ変動も小さい</li>
-  </ul>
-  <div class="highlight-box">
-    <p>「データを持っている者が勝つ」時代</p>
-  </div>
-  <p class="source">参考: 馬王 baoland.com — 2013年大阪税務訴訟（14億円利益）で話題に</p>
 </body>
 </html>

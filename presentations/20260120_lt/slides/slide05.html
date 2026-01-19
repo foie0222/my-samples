@@ -10,52 +10,85 @@
       display: flex;
       flex-direction: column;
       font-family: Arial, sans-serif;
-      background: #0d1117 url('bg-dark.png') center center no-repeat;
+      background: #0d1117 url('images/bg-dark.png') center center no-repeat;
       background-size: cover;
       color: #ffffff;
-      padding: 40pt 40pt 44pt 40pt;
+      padding: 36pt 40pt;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20pt;
+    }
+    .header-left {
+      flex: 1;
     }
     .label {
       font-size: 10pt;
       color: #4ECDC4;
       text-transform: uppercase;
       letter-spacing: 0.2em;
-      margin-bottom: 10pt;
+      margin-bottom: 8pt;
     }
     h1 {
-      font-size: 26pt;
+      font-size: 28pt;
       font-weight: bold;
       color: #ffffff;
       margin-bottom: 6pt;
     }
     .subtitle {
-      font-size: 12pt;
+      font-size: 11pt;
       color: #8b949e;
+    }
+    .book-img {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .book-img img {
+      height: 130pt;
+      width: auto;
+      border-radius: 4pt;
+      box-shadow: 0 4pt 12pt rgba(0,0,0,0.3);
+    }
+    .book-img .source {
+      font-size: 7pt;
+      color: #6b7280;
+      margin-top: 4pt;
+    }
+    .stats-row {
+      display: flex;
+      gap: 16pt;
       margin-bottom: 16pt;
     }
-    .hero-stat {
+    .stat-card {
+      flex: 1;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8pt;
+      padding: 12pt 16pt;
       text-align: center;
-      margin-bottom: 16pt;
+      background: rgba(255,255,255,0.03);
     }
-    .hero-number {
-      font-size: 56pt;
+    .stat-card p {
+      font-size: 10pt;
+      color: #8b949e;
+      margin-bottom: 4pt;
+    }
+    .stat-card h2 {
+      font-size: 16pt;
       font-weight: bold;
       color: #4ECDC4;
     }
-    .hero-label {
-      font-size: 12pt;
-      color: #8b949e;
-      margin-top: 4pt;
-    }
     ul {
       list-style: none;
-      margin-bottom: 14pt;
+      margin-bottom: 16pt;
     }
     li {
       font-size: 12pt;
-      line-height: 1.7;
+      line-height: 1.9;
       color: #8b949e;
-      padding-left: 18pt;
+      padding-left: 16pt;
       position: relative;
     }
     li::before {
@@ -65,32 +98,50 @@
       color: #4ECDC4;
     }
     .highlight-box {
-      border: 1px solid #FFD700;
+      border: 1px solid #4ECDC4;
       border-radius: 8pt;
-      padding: 10pt 20pt;
+      padding: 12pt 20pt;
       text-align: center;
-      background: rgba(255,215,0,0.05);
+      background: rgba(78,205,196,0.05);
+      margin-top: auto;
     }
     .highlight-box p {
       font-size: 13pt;
-      color: #FFD700;
+      color: #ffffff;
     }
   </style>
 </head>
 <body>
-  <p class="label">Case Study</p>
-  <h1>AI Mamba登場（2017年〜）</h1>
-  <p class="subtitle">ドワンゴのエンジニアチームが開発</p>
-  <div class="hero-stat">
-    <p class="hero-number">+800万円</p>
-    <p class="hero-label">ニコ生企画 3ヶ月の成果</p>
+  <div class="header">
+    <div class="header-left">
+      <p class="label">History</p>
+      <h1>競馬AI黎明期（〜2016年頃）</h1>
+      <p class="subtitle">1995年「馬王」登場（荒井俊也氏）— 統計的競馬予測の先駆け</p>
+    </div>
+    <div class="book-img">
+      <img src="images/baou-book.jpg" alt="馬王">
+      <p class="source">出典: Amazon / baoland.com</p>
+    </div>
   </div>
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <p>キーワード</p>
+      <h2>データ格差</h2>
+    </div>
+    <div class="stat-card">
+      <p>2013年 話題になった事件</p>
+      <h2>データ分析で1.4億円稼いだ人</h2>
+    </div>
+  </div>
+
   <ul>
-    <li>メディアで話題に →「AIで競馬に勝てる」という夢が広まる</li>
-    <li>ここから松風、AlphaImpactなど派生プロジェクトが誕生</li>
+    <li>当時はデータが高価 → 持っている人だけが勝てた</li>
+    <li>参入者が少ない → オッズ変動も小さい</li>
   </ul>
+
   <div class="highlight-box">
-    <p>競馬AIブームの火付け役</p>
+    <p>「データを持っている者が勝つ」時代</p>
   </div>
 </body>
 </html>

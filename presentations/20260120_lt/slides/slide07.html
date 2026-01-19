@@ -10,73 +10,94 @@
       display: flex;
       flex-direction: column;
       font-family: Arial, sans-serif;
-      background: #0d1117 url('bg-dark.png') center center no-repeat;
+      background: #0d1117 url('images/bg-dark.png') center center no-repeat;
       background-size: cover;
       color: #ffffff;
-      padding: 36pt 40pt 44pt 40pt;
+      padding: 36pt 40pt;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10pt;
+    }
+    .header-left {
+      flex: 1;
     }
     .label {
       font-size: 10pt;
       color: #4ECDC4;
       text-transform: uppercase;
       letter-spacing: 0.2em;
-      margin-bottom: 10pt;
+      margin-bottom: 8pt;
     }
     h1 {
-      font-size: 26pt;
+      font-size: 28pt;
       font-weight: bold;
       color: #ffffff;
-      margin-bottom: 6pt;
+      margin-bottom: 4pt;
     }
     .subtitle {
       font-size: 11pt;
       color: #8b949e;
-      margin-bottom: 10pt;
+    }
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .profile img {
+      width: 80pt;
+      height: 80pt;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #4ECDC4;
+    }
+    .profile .source {
+      font-size: 7pt;
+      color: #6b7280;
+      margin-top: 4pt;
     }
     .stats-row {
       display: flex;
-      gap: 10pt;
+      gap: 16pt;
       margin-bottom: 8pt;
     }
     .stat-card {
       flex: 1;
       border: 1px solid rgba(255,255,255,0.15);
       border-radius: 8pt;
-      padding: 8pt 12pt;
+      padding: 10pt 16pt;
       text-align: center;
       background: rgba(255,255,255,0.03);
     }
     .stat-card p {
-      font-size: 8pt;
+      font-size: 10pt;
       color: #8b949e;
-      margin-bottom: 3pt;
+      margin-bottom: 4pt;
     }
     .stat-card h2 {
-      font-size: 14pt;
+      font-size: 20pt;
       font-weight: bold;
       color: #4ECDC4;
     }
-    .stat-card.highlight {
-      border-color: #4ECDC4;
-      background: rgba(78,205,196,0.1);
-    }
-    .end-box {
-      border: 1px solid #DC143C;
+    .big-stat {
+      border: 1px solid #4ECDC4;
       border-radius: 8pt;
-      padding: 10pt 18pt;
+      padding: 10pt 20pt;
       text-align: center;
       margin-bottom: 8pt;
-      background: rgba(220,20,60,0.1);
+      background: rgba(78,205,196,0.05);
     }
-    .end-box h2 {
-      font-size: 16pt;
-      font-weight: bold;
-      color: #DC143C;
-      margin-bottom: 3pt;
-    }
-    .end-box p {
-      font-size: 11pt;
+    .big-stat p {
+      font-size: 10pt;
       color: #8b949e;
+      margin-bottom: 4pt;
+    }
+    .big-stat h2 {
+      font-size: 14pt;
+      font-weight: bold;
+      color: #4ECDC4;
     }
     ul {
       list-style: none;
@@ -86,7 +107,7 @@
       font-size: 11pt;
       line-height: 1.6;
       color: #8b949e;
-      padding-left: 14pt;
+      padding-left: 16pt;
       position: relative;
     }
     li::before {
@@ -98,9 +119,10 @@
     .badge {
       border: 1px solid #FFD700;
       border-radius: 8pt;
-      padding: 8pt 16pt;
+      padding: 10pt 20pt;
       text-align: center;
       background: rgba(255,215,0,0.05);
+      margin-top: auto;
     }
     .badge p {
       font-size: 12pt;
@@ -109,37 +131,41 @@
   </style>
 </head>
 <body>
-  <p class="label">Case Study</p>
-  <h1>競馬AIゆまの終焉（2022年）</h1>
-  <p class="subtitle">2018年登場 / 5000万アクセス・5万フォロワーの人気サービス</p>
+  <div class="header">
+    <div class="header-left">
+      <p class="label">Case Study</p>
+      <h1>松風の衝撃（2017年〜）</h1>
+      <p class="subtitle">毎レース締切直前に買い目を無料公開（2017年〜2020年8月に公開終了）</p>
+    </div>
+    <div class="profile">
+      <img src="images/matsukaze-icon.jpg" alt="松風">
+      <p class="source">出典: X (@matsukaze_f)</p>
+    </div>
+  </div>
 
   <div class="stats-row">
     <div class="stat-card">
-      <p>地方競馬（48,020レース）</p>
-      <h2>回収率 113.7%</h2>
+      <p>2019年</p>
+      <h2>+1,739万円</h2>
     </div>
     <div class="stat-card">
-      <p>JRA（9,678レース）</p>
-      <h2>回収率 107.5%</h2>
-    </div>
-    <div class="stat-card highlight">
-      <p>累計利益</p>
-      <h2>約350万円</h2>
+      <p>2020年</p>
+      <h2>+2億円</h2>
     </div>
   </div>
 
-  <div class="end-box">
-    <h2>2022年8月にサービス終了</h2>
-    <p>終了理由:「利用者増加によるオッズ低下」</p>
+  <div class="big-stat">
+    <p>2020年10月〜12月（3ヶ月間）</p>
+    <h2>購入 17.5億円 → 払戻 20.8億円 → 収支 +3.3億円</h2>
   </div>
 
   <ul>
-    <li>「勝てない予想を提供したくない」</li>
-    <li>予想を公開すること自体が自滅につながる</li>
+    <li>AI Mambaから派生、個人開発者がここまでスケール</li>
+    <li>2020年8月に買い目公開を終了 → 自分専用に</li>
   </ul>
 
   <div class="badge">
-    <p>→ Key Messageの完璧な証明</p>
+    <p>「先行者利益で札束勢になった」象徴</p>
   </div>
 </body>
 </html>
