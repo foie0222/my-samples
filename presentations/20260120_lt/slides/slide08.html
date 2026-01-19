@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 720pt;
+      height: 405pt;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      background: #0d1117 url('bg-dark.png') center center no-repeat;
+      background-size: cover;
+      color: #ffffff;
+      padding: 40pt 40pt 44pt 40pt;
+    }
+    .label {
+      font-size: 10pt;
+      color: #DC143C;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-bottom: 12pt;
+    }
+    h1 {
+      font-size: 26pt;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 24pt;
+    }
+    ul {
+      list-style: none;
+      margin-bottom: 24pt;
+    }
+    li {
+      font-size: 14pt;
+      line-height: 1.8;
+      color: #8b949e;
+      padding-left: 20pt;
+      position: relative;
+    }
+    li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #DC143C;
+    }
+    .result-box {
+      border: 1px solid #DC143C;
+      border-radius: 8pt;
+      padding: 14pt 24pt;
+      text-align: center;
+      margin-bottom: 16pt;
+      background: rgba(220,20,60,0.1);
+    }
+    .result-box h2 {
+      font-size: 15pt;
+      font-weight: bold;
+      color: #DC143C;
+    }
+    .note {
+      font-size: 12pt;
+      text-align: center;
+      color: #8b949e;
+    }
+  </style>
+</head>
+<body>
+  <p class="label">Conclusion</p>
+  <h1>なぜ今から参入しても勝てないのか</h1>
+  <ul>
+    <li>参入者増加 → 同じ買い目に殺到 → オッズ急落</li>
+    <li>先行者（松風など）→ 資金力でオッズを動かせる側に</li>
+    <li>計算時点と購入時点でオッズがズレる</li>
+  </ul>
+  <div class="result-box">
+    <h2>今から普通に参入しても、オッズ変動を予測できず期待値が取れない</h2>
+  </div>
+  <p class="note">競馬AIゆまも「公開したら勝てなくなる」と判断した世界</p>
+</body>
+</html>

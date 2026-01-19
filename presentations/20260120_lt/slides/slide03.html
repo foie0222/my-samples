@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 720pt;
+      height: 405pt;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      background: #0d1117 url('bg-dark.png') center center no-repeat;
+      background-size: cover;
+      color: #ffffff;
+      padding: 36pt 40pt 40pt 40pt;
+    }
+    .label {
+      font-size: 10pt;
+      color: #4ECDC4;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-bottom: 8pt;
+    }
+    h1 {
+      font-size: 26pt;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 14pt;
+    }
+    .section-title {
+      font-size: 11pt;
+      color: #4ECDC4;
+      margin-bottom: 4pt;
+    }
+    .section-text {
+      font-size: 11pt;
+      color: #8b949e;
+      line-height: 1.4;
+      margin-bottom: 12pt;
+    }
+    .formula-box {
+      border: 1px solid #4ECDC4;
+      border-radius: 8pt;
+      padding: 10pt 20pt;
+      text-align: center;
+      margin-bottom: 12pt;
+      background: rgba(78,205,196,0.05);
+    }
+    .formula {
+      font-size: 22pt;
+      font-weight: bold;
+      color: #4ECDC4;
+    }
+    .two-col {
+      display: flex;
+      gap: 14pt;
+      margin-bottom: 12pt;
+    }
+    .col {
+      flex: 1;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8pt;
+      padding: 10pt 14pt;
+      background: rgba(255,255,255,0.03);
+    }
+    .col.danger {
+      border-color: #DC143C;
+      background: rgba(220,20,60,0.1);
+    }
+    .col h2 {
+      font-size: 13pt;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 3pt;
+    }
+    .col.danger h2 {
+      color: #DC143C;
+    }
+    .col p {
+      font-size: 10pt;
+      color: #8b949e;
+    }
+    .example {
+      font-size: 10pt;
+      color: #8b949e;
+      margin-bottom: 10pt;
+    }
+    .warning-box {
+      border: 1px solid #DC143C;
+      border-radius: 8pt;
+      padding: 8pt 16pt;
+      text-align: center;
+      background: rgba(220,20,60,0.1);
+    }
+    .warning-box p {
+      font-size: 12pt;
+      color: #DC143C;
+      font-weight: bold;
+    }
+    .source {
+      font-size: 9pt;
+      color: #6b7280;
+      margin-top: 8pt;
+      text-align: right;
+    }
+    .source a {
+      color: #6b7280;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <p class="label">Key Concept</p>
+  <h1>期待値の構造</h1>
+
+  <p class="section-title">オッズの決まり方（パリミュチュエル方式）</p>
+  <p class="section-text">JRA: 「馬券の売上総額から控除率（約25%）を引いた額を的中者で分配」</p>
+
+  <div class="formula-box">
+    <p class="formula">期待値 = 確率 × オッズ</p>
+  </div>
+
+  <div class="two-col">
+    <div class="col">
+      <h2>確率</h2>
+      <p>機械学習で計算できる（技術で解決可能）</p>
+    </div>
+    <div class="col danger">
+      <h2>オッズ</h2>
+      <p>全員の投票で決まる → 変動する</p>
+    </div>
+  </div>
+
+  <p class="example">例: AIが勝率15%と計算、オッズ10倍 → 期待値 150%（これが「歪み」）</p>
+
+  <div class="warning-box">
+    <p>問題: 歪みは消える（オッズが変動するから）</p>
+  </div>
+  <p class="source">出典: JRA公式サイト jra.go.jp/kouza/</p>
+</body>
+</html>

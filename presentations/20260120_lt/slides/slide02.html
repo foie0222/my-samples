@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 720pt;
+      height: 405pt;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      background: #0d1117 url('bg-dark.png') center center no-repeat;
+      background-size: cover;
+      color: #ffffff;
+      padding: 40pt;
+    }
+    .label {
+      font-size: 10pt;
+      color: #4ECDC4;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-bottom: 24pt;
+    }
+    h1 {
+      font-size: 32pt;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 30pt;
+    }
+    .timeline {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30pt;
+    }
+    .timeline-item {
+      text-align: center;
+      padding: 14pt 20pt;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8pt;
+      background: rgba(255,255,255,0.03);
+    }
+    .timeline-item.success {
+      border-color: #4ECDC4;
+      background: rgba(78,205,196,0.1);
+    }
+    .timeline-item.danger {
+      border-color: #DC143C;
+      background: rgba(220,20,60,0.1);
+    }
+    .timeline-item h2 {
+      font-size: 24pt;
+      font-weight: bold;
+      margin-bottom: 4pt;
+    }
+    .timeline-item.success h2 {
+      color: #4ECDC4;
+    }
+    .timeline-item.danger h2 {
+      color: #DC143C;
+    }
+    .timeline-item p {
+      font-size: 11pt;
+      color: #8b949e;
+    }
+    .arrow {
+      font-size: 20pt;
+      color: #8b949e;
+      padding: 0 16pt;
+    }
+    .cause {
+      font-size: 14pt;
+      color: #8b949e;
+      text-align: center;
+      margin-bottom: 24pt;
+    }
+    .message-box {
+      border: 1px solid rgba(78,205,196,0.3);
+      border-radius: 8pt;
+      padding: 16pt 24pt;
+      text-align: center;
+      background: rgba(78,205,196,0.05);
+    }
+    .message-box p {
+      font-size: 16pt;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <p class="label">Previous Talk</p>
+  <h1>前回のあらすじ</h1>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h2>5万円</h2>
+      <p>軍資金</p>
+    </div>
+    <p class="arrow">→</p>
+    <div class="timeline-item success">
+      <h2>+150万円</h2>
+      <p>最高到達点</p>
+    </div>
+    <p class="arrow">→</p>
+    <div class="timeline-item danger">
+      <h2>全損</h2>
+      <p>結末</p>
+    </div>
+  </div>
+  <p class="cause">敗因: オッズが下がって期待値が取れなくなった</p>
+  <div class="message-box">
+    <p>「なぜそうなったのか？」今日はその構造を話します</p>
+  </div>
+</body>
+</html>

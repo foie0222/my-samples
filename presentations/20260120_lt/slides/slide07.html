@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      width: 720pt;
+      height: 405pt;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      background: #0d1117 url('bg-dark.png') center center no-repeat;
+      background-size: cover;
+      color: #ffffff;
+      padding: 36pt 40pt 44pt 40pt;
+    }
+    .label {
+      font-size: 10pt;
+      color: #4ECDC4;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-bottom: 10pt;
+    }
+    h1 {
+      font-size: 26pt;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 6pt;
+    }
+    .subtitle {
+      font-size: 11pt;
+      color: #8b949e;
+      margin-bottom: 10pt;
+    }
+    .stats-row {
+      display: flex;
+      gap: 10pt;
+      margin-bottom: 8pt;
+    }
+    .stat-card {
+      flex: 1;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8pt;
+      padding: 8pt 12pt;
+      text-align: center;
+      background: rgba(255,255,255,0.03);
+    }
+    .stat-card p {
+      font-size: 8pt;
+      color: #8b949e;
+      margin-bottom: 3pt;
+    }
+    .stat-card h2 {
+      font-size: 14pt;
+      font-weight: bold;
+      color: #4ECDC4;
+    }
+    .stat-card.highlight {
+      border-color: #4ECDC4;
+      background: rgba(78,205,196,0.1);
+    }
+    .end-box {
+      border: 1px solid #DC143C;
+      border-radius: 8pt;
+      padding: 10pt 18pt;
+      text-align: center;
+      margin-bottom: 8pt;
+      background: rgba(220,20,60,0.1);
+    }
+    .end-box h2 {
+      font-size: 16pt;
+      font-weight: bold;
+      color: #DC143C;
+      margin-bottom: 3pt;
+    }
+    .end-box p {
+      font-size: 11pt;
+      color: #8b949e;
+    }
+    ul {
+      list-style: none;
+      margin-bottom: 8pt;
+    }
+    li {
+      font-size: 11pt;
+      line-height: 1.6;
+      color: #8b949e;
+      padding-left: 14pt;
+      position: relative;
+    }
+    li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #4ECDC4;
+    }
+    .badge {
+      border: 1px solid #FFD700;
+      border-radius: 8pt;
+      padding: 8pt 16pt;
+      text-align: center;
+      background: rgba(255,215,0,0.05);
+    }
+    .badge p {
+      font-size: 12pt;
+      color: #FFD700;
+    }
+  </style>
+</head>
+<body>
+  <p class="label">Case Study</p>
+  <h1>競馬AIゆまの終焉（2022年）</h1>
+  <p class="subtitle">2018年登場 / 5000万アクセス・5万フォロワーの人気サービス</p>
+
+  <div class="stats-row">
+    <div class="stat-card">
+      <p>地方競馬（48,020レース）</p>
+      <h2>回収率 113.7%</h2>
+    </div>
+    <div class="stat-card">
+      <p>JRA（9,678レース）</p>
+      <h2>回収率 107.5%</h2>
+    </div>
+    <div class="stat-card highlight">
+      <p>累計利益</p>
+      <h2>約350万円</h2>
+    </div>
+  </div>
+
+  <div class="end-box">
+    <h2>2022年8月にサービス終了</h2>
+    <p>終了理由:「利用者増加によるオッズ低下」</p>
+  </div>
+
+  <ul>
+    <li>「勝てない予想を提供したくない」</li>
+    <li>予想を公開すること自体が自滅につながる</li>
+  </ul>
+
+  <div class="badge">
+    <p>→ Key Messageの完璧な証明</p>
+  </div>
+</body>
+</html>
